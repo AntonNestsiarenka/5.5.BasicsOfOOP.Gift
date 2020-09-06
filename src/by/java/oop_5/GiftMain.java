@@ -25,7 +25,7 @@ public class GiftMain {
             storageGiftSweetnessPacking.storageGiftSweetnessPackingInit();
         } catch (IOException e) {
             viewer.printErrorMessage(e.getMessage());
-            throw new ApplicationInitializationException("Application initialization failed");
+            throw new ApplicationInitializationException("Application initialization failed", e);
         }
 
         MenuApp menu = new MenuApp(client, storageSweetness, storageGiftSweetnessPacking);
