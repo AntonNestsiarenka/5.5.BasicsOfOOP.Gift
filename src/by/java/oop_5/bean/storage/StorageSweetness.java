@@ -179,24 +179,27 @@ public final class StorageSweetness {
             initCandy();
         } catch (IOException e) {
             viewer.printErrorMessage(e.getMessage());
-            viewer.printMessage("The application tries to initialize the following available data");
+            viewer.printErrorMessage("The application tries to initialize the following available data");
         }
         try {
             initChocolate();
         } catch (IOException e) {
             viewer.printErrorMessage(e.getMessage());
-            viewer.printMessage("The application tries to initialize the following available data");
+            viewer.printErrorMessage("The application tries to initialize the following available data");
         }
         try {
             initHalva();
         } catch (IOException e) {
             viewer.printErrorMessage(e.getMessage());
-            viewer.printMessage("The application tries to initialize the following available data");
+            viewer.printErrorMessage("The application tries to initialize the following available data");
         }
         try {
             initMarshmallow();
         } catch (IOException e) {
             viewer.printErrorMessage(e.getMessage());
+        }
+        if (allSweetness.size() == 0)
+        {
             throw new ApplicationInitializationException("Application initialization failed");
         }
     }
